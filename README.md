@@ -1,7 +1,7 @@
-# KPK Secure Solutions Pvt Ltd - Static Website
+# KPK SECURE SOLUTIONS SERVICE - Static Website
 
 ## Overview
-A professional, modern corporate website for KPK Secure Solutions Pvt Ltd, a premier security and facility management company based in Bengaluru, Karnataka.
+A professional, modern corporate website for KPK SECURE SOLUTIONS SERVICE, a premier security and facility management company based in Bengaluru, Karnataka.
 
 ## Features
 - ✅ Modern corporate design with clean lines
@@ -95,7 +95,7 @@ kpk-website/
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## Contact Information
-**KPK Secure Solutions Pvt Ltd**
+**KPK SECURE SOLUTIONS SERVICE**
 - Phone: +91-9110864861 / +91-8310511326
 - Email: sales@kpksecuresolutions.com
 - Location: Marathalli, Bengaluru, Karnataka
@@ -111,7 +111,7 @@ kpk-website/
 4. Reception Services
 
 ## License
-All rights reserved © 2024 KPK Secure Solutions Pvt Ltd
+All rights reserved © 2024 KPK SECURE SOLUTIONS SERVICE
 
 ## Support
 For any technical issues or questions about the website, please contact the development team.
