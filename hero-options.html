@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPK Secure Solutions - Hero Options</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        :root {
+            --primary-red: #E61E2A;
+            --secondary-navy: #343B55;
+        }
+
+        /* Navigation (Simple) */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(52, 59, 85, 0.95);
+            padding: 15px 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* ================================
+           OPTION 1: Diagonal Split Design
+           ================================ */
+        .hero-option-1 {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .diagonal-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--secondary-navy) 0%, var(--secondary-navy) 50%, var(--primary-red) 50%, var(--primary-red) 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+        }
+
+        .hero-option-1 .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content-1 {
+            color: white;
+        }
+
+        .badge-1 {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-title-1 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-title-1 .highlight {
+            color: #FFD700;
+            display: block;
+        }
+
+        .hero-subtitle-1 {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .hero-buttons-1 {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-primary-1 {
+            padding: 18px 40px;
+            background: var(--primary-red);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 10px 30px rgba(230, 30, 42, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-1:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(230, 30, 42, 0.6);
+        }
+
+        .btn-secondary-1 {
+            padding: 18px 40px;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary-1:hover {
+            background: white;
+            color: var(--primary-red);
+        }
+
+        .hero-visual-1 {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main-logo-1 {
+            width: 400px;
+            animation: float 3s ease-in-out infinite;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .circle-1 { width: 100px; height: 100px; top: 10%; left: 10%; animation-delay: 0s; }
+        .circle-2 { width: 150px; height: 150px; bottom: 15%; right: 10%; animation-delay: 0.5s; }
+        .circle-3 { width: 80px; height: 80px; top: 60%; left: 5%; animation-delay: 1s; }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+
+        /* ================================
+           OPTION 2: Modern Card Layout
+           ================================ */
+        .hero-option-2 {
+            position: relative;
+            min-height: 100vh;
+            background: var(--secondary-navy);
+            display: flex;
+            align-items: center;
+            padding: 120px 0 80px;
+        }
+
+        .geometric-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .geo-shape {
+            position: absolute;
+            opacity: 0.05;
+        }
+
+        .geo-1 {
+            width: 300px;
+            height: 300px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            top: -100px;
+            right: 10%;
+        }
+
+        .geo-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--primary-red);
+            transform: rotate(45deg);
+            bottom: -150px;
+            left: -100px;
+        }
+
+        .hero-option-2 .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 80px 60px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-showcase {
+            margin-bottom: 40px;
+        }
+
+        .logo-showcase img {
+            width: 200px;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(230, 30, 42, 0.5)); }
+            50% { filter: drop-shadow(0 0 40px rgba(230, 30, 42, 0.8)); }
+        }
+
+        .hero-title-2 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-title-2 .red {
+            color: var(--primary-red);
+        }
+
+        .hero-subtitle-2 {
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .stat-box {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-red);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            color: white;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .hero-button-2 {
+            padding: 20px 50px;
+            background: var(--primary-red);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 40px rgba(230, 30, 42, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .hero-button-2:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(230, 30, 42, 0.7);
+        }
+
+        /* ================================
+           OPTION 3: Dynamic Angled Design
+           ================================ */
+        .hero-option-3 {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .angled-section {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .angle-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background: var(--secondary-navy);
+            transform: skewY(-3deg);
+            transform-origin: top left;
+        }
+
+        .angle-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: var(--primary-red);
+            transform: skewY(-3deg);
+            transform-origin: bottom right;
+        }
+
+        .hero-option-3 .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero-text-3 {
+            color: white;
+        }
+
+        .tag-3 {
+            background: var(--primary-red);
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-title-3 {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 25px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-title-3 .large {
+            font-size: 5rem;
+            display: block;
+            color: var(--primary-red);
+            text-shadow: 3px 3px 0 rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-description-3 {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .feature-item i {
+            color: var(--primary-red);
+            background: white;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 0.8rem;
+        }
+
+        .hero-cta-3 {
+            padding: 20px 45px;
+            background: white;
+            color: var(--primary-red);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .hero-cta-3:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-image-3 {
+            position: relative;
+        }
+
+        .image-stack {
+            position: relative;
+        }
+
+        .main-image-3 {
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .overlay-card {
+            position: absolute;
+            background: white;
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            animation: slideIn 1s ease forwards;
+        }
+
+        .card-1 {
+            top: 10%;
+            right: -30px;
+            animation-delay: 0.3s;
+        }
+
+        .card-2 {
+            bottom: 15%;
+            left: -30px;
+            animation-delay: 0.6s;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .overlay-card i {
+            font-size: 2rem;
+            color: var(--primary-red);
+            margin-bottom: 10px;
+        }
+
+        .overlay-card h4 {
+            color: var(--secondary-navy);
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .overlay-card p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Section Separator */
+        .section-divider {
+            background: #f8f9fa;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .section-divider h2 {
+            font-size: 2rem;
+            color: var(--secondary-navy);
+            margin-bottom: 10px;
+        }
+
+        .section-divider p {
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-option-1 .container,
+            .hero-grid-3 {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-title-1,
+            .hero-title-2,
+            .hero-title-3 {
+                font-size: 2.5rem;
+            }
+
+            .hero-title-3 .large {
+                font-size: 3.5rem;
+            }
+
+            .main-logo-1,
+            .main-image-3 {
+                max-width: 300px;
+            }
+
+            .stats-row {
+                gap: 30px;
+            }
+
+            .features-list {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-card {
+                padding: 50px 30px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .hero-buttons-1 {
+                flex-direction: column;
+            }
+
+            .btn-primary-1,
+            .btn-secondary-1,
+            .hero-button-2,
+            .hero-cta-3 {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .stats-row {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <img src="https://customer-assets.emergentagent.com/job_36fd4dc6-1268-428d-9eb8-13905c0d6a94/artifacts/32m0hssd_KPK%20Source%20File.png" alt="KPK Logo" class="logo">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#option2">About Us</a></li>
+                <li><a href="#option3">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- OPTION 1: Diagonal Split Design -->
+    <section class="hero-option-1" id="option1">
+        <div class="diagonal-bg"></div>
+        <div class="container">
+            <div class="hero-content-1">
+                <div class="badge-1">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>TRUSTED SECURITY PARTNER</span>
+                </div>
+                <h1 class="hero-title-1">
+                    YOUR SAFETY,
+                    <span class="highlight">OUR PRIORITY</span>
+                </h1>
+                <p class="hero-subtitle-1">
+                    Premier security and facility management services in Bengaluru. Professional, reliable, available 24/7.
+                </p>
+                <div class="hero-buttons-1">
+                    <a href="#" class="btn-primary-1">
+                        <i class="fas fa-phone-alt"></i> Get Started
+                    </a>
+                    <a href="#" class="btn-secondary-1">Our Services</a>
+                </div>
+            </div>
+            <div class="hero-visual-1">
+                <div class="floating-elements">
+                    <div class="circle circle-1"></div>
+                    <div class="circle circle-2"></div>
+                    <div class="circle circle-3"></div>
+                </div>
+                <img src="https://customer-assets.emergentagent.com/job_36fd4dc6-1268-428d-9eb8-13905c0d6a94/artifacts/32m0hssd_KPK%20Source%20File.png" alt="KPK Logo" class="main-logo-1">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <h2>⬇️ SCROLL DOWN FOR MORE OPTIONS ⬇️</h2>
+        <p>Three different hero designs to choose from</p>
+    </div>
+
+    <!-- OPTION 2: Modern Card Layout -->
+    <section class="hero-option-2" id="option2">
+        <div class="geometric-bg">
+            <div class="geo-shape geo-1"></div>
+            <div class="geo-shape geo-2"></div>
+        </div>
+        <div class="container">
+            <div class="hero-card">
+                <div class="logo-showcase">
+                    <img src="https://customer-assets.emergentagent.com/job_36fd4dc6-1268-428d-9eb8-13905c0d6a94/artifacts/32m0hssd_KPK%20Source%20File.png" alt="KPK Logo">
+                </div>
+                <h1 class="hero-title-2">
+                    KPK SECURE <span class="red">SOLUTIONS</span>
+                </h1>
+                <p class="hero-subtitle-2">Your Trusted Partner in Security & Facility Management</p>
+
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Trained Personnel</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Support</span>
+                    </div>
+                </div>
+
+                <a href="#" class="hero-button-2">
+                    <i class="fas fa-phone-alt"></i> Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <h2>⬇️ ONE MORE OPTION BELOW ⬇️</h2>
+        <p>Dynamic angled design</p>
+    </div>
+
+    <!-- OPTION 3: Dynamic Angled Design -->
+    <section class="hero-option-3" id="option3">
+        <div class="angled-section">
+            <div class="angle-top"></div>
+            <div class="angle-bottom"></div>
+        </div>
+        <div class="container">
+            <div class="hero-grid-3">
+                <div class="hero-text-3">
+                    <span class="tag-3">SECURITY EXPERTS</span>
+                    <h1 class="hero-title-3">
+                        PROTECTING
+                        <span class="large">BENGALURU</span>
+                    </h1>
+                    <p class="hero-description-3">
+                        Comprehensive security and facility management services designed for your peace of mind.
+                    </p>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>24/7 Security</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Trained Staff</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Eco-Friendly</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Fast Response</span>
+                        </div>
+                    </div>
+                    <a href="#" class="hero-cta-3">
+                        Contact Us Now <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="hero-image-3">
+                    <div class="image-stack">
+                        <img src="https://customer-assets.emergentagent.com/job_36fd4dc6-1268-428d-9eb8-13905c0d6a94/artifacts/32m0hssd_KPK%20Source%20File.png" alt="KPK Logo" class="main-image-3">
+                        <div class="overlay-card card-1">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>Security</h4>
+                            <p>Round-the-clock protection</p>
+                        </div>
+                        <div class="overlay-card card-2">
+                            <i class="fas fa-broom"></i>
+                            <h4>Facility Care</h4>
+                            <p>Professional maintenance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
