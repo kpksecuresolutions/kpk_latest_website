@@ -190,4 +190,4 @@ if (testimonialCards.length > 0) {
 }
 */
 
-console.log('KPK Secure Solutions - Website Loaded Successfully');
+console.log('KPK SECURE SOLUTIONS SERVICE - Website Loaded Successfully');
