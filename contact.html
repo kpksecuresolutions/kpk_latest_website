@@ -13,7 +13,7 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <div class="logo-container">
-                <img src="https://customer-assets.emergentagent.com/job_36fd4dc6-1268-428d-9eb8-13905c0d6a94/artifacts/32m0hssd_KPK%20Source%20File.png" alt="KPK Secure Solutions Logo" class="logo">
+                <img src="https://customer-assets.emergentagent.com/job_36fd4dc6-1268-428d-9eb8-13905c0d6a94/artifacts/32m0hssd_KPK%20Source%20File.png" alt="KPK SECURE SOLUTIONS SERVICE Logo" class="logo">
             </div>
             <button class="mobile-menu-toggle" id="mobileMenuToggle" data-testid="mobile-menu-toggle">
                 <span></span>
@@ -38,111 +38,105 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section" data-testid="contact-section">
+    <!-- Map and Address Side by Side Section -->
+    <section class="contact-map-address-section" data-testid="map-address-section">
         <div class="container">
-            <div class="contact-grid">
-                <!-- Contact Form -->
-                <div class="contact-form-container fade-in" data-testid="contact-form-container">
-                    <h2>Send Us a Message</h2>
-                    <p class="form-description">Fill out the form below and we'll get back to you as soon as possible.</p>
-                    <form class="contact-form" id="contactForm" data-testid="contact-form">
-                        <div class="form-note">
-                            <i class="fas fa-info-circle"></i>
-                            <p>Note: Replace the form action URL below with your Google Form URL</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Full Name *</label>
-                            <input type="text" id="name" name="name" required data-testid="form-input-name">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required data-testid="form-input-email">
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required data-testid="form-input-phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service Interested In</label>
-                            <select id="service" name="service" data-testid="form-select-service">
-                                <option value="">Select a service</option>
-                                <option value="security">Security Services</option>
-                                <option value="housekeeping">Housekeeping Services</option>
-                                <option value="pest-control">Pest Control</option>
-                                <option value="reception">Reception Services</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="5" required data-testid="form-textarea-message"></textarea>
-                        </div>
-                        <button type="submit" class="submit-button" data-testid="form-submit-button">
-                            <i class="fas fa-paper-plane"></i> Submit Inquiry
-                        </button>
-                    </form>
+            <h2 class="section-title" data-testid="find-us-title">Find Us</h2>
+            <div class="title-underline"></div>
+            <div class="map-address-grid">
+                <!-- Map -->
+                <div class="map-wrapper" data-testid="map-wrapper">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124424.18134314836!2d77.59456539726562!3d12.934428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1498b90c2eb5%3A0xca2e58c27dc15217!2sMarathahalli%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1642534567890!5m2!1sen!2sin"
+                        allowfullscreen=""
+                        loading="lazy"
+                        data-testid="google-map-iframe">
+                    </iframe>
                 </div>
 
-                <!-- Contact Information -->
-                <div class="contact-info-container fade-in" data-testid="contact-info-container">
-                    <h2>Contact Information</h2>
-                    <div class="contact-info-cards">
-                        <div class="info-card" data-testid="info-card-phone">
-                            <div class="info-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <h3>Phone</h3>
-                            <p>+91-9110864861</p>
-                            <p>+91-8310511326</p>
-                        </div>
+                <!-- Address Details -->
+                <div class="address-wrapper" data-testid="address-wrapper">
+                    <h2>Our Location</h2>
 
-                        <div class="info-card" data-testid="info-card-email">
-                            <div class="info-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <h3>Email</h3>
-                            <p>sales@kpksecuresolutions.com</p>
+                    <div class="address-item">
+                        <div class="address-icon">
+                            <i class="fas fa-map-marker-alt"></i>
                         </div>
+                        <div class="address-content">
+                            <h4>Office Address</h4>
+                            <p>NO.-13, BHAVANI NILAYAM VEERAPPA REDDY LAYOUT, <br/>4TH CROSS, BHUVANESWARI LAYOUT, RAILWAY GATE<br/>
+                            MUNNEKOLALA BENGALURU - 560037, KARNATAKA </p>
+                        </div>
+                    </div>
 
-                        <div class="info-card" data-testid="info-card-location">
-                            <div class="info-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <h3>Location</h3>
-                            <p>NO.-13, BHAVANI NILAYAM VEERAPPA REDDY LAYOUT, 4TH CROSS, BHUVANESWARI LAYOUT, RAILWAY GATE</p>
-                            <p>MUNNEKOLALA BENGALURU - 560037, KARNATAKA, INDIA</p>
+                    <div class="address-item">
+                        <div class="address-icon">
+                            <i class="fas fa-phone"></i>
                         </div>
+                        <div class="address-content">
+                            <h4>Phone Numbers</h4>
+                            <p>
+                                <a href="tel:+919110864861">+91-9110864861</a><br>
+                                <a href="tel:+918310511326">+91-8310511326</a>
+                            </p>
+                        </div>
+                    </div>
 
-                        <div class="info-card" data-testid="info-card-hours">
-                            <div class="info-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <h3>Business Hours</h3>
-                            <p>24/7 Service Available</p>
-                            <p>Emergency Support Always</p>
+                    <div class="address-item">
+                        <div class="address-icon">
+                            <i class="fas fa-envelope"></i>
                         </div>
+                        <div class="address-content">
+                            <h4>Email Address</h4>
+                            <p><a href="mailto:sales@kpksecuresolutions.com">sales@kpksecuresolutions.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="address-item">
+                        <div class="address-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="address-content">
+                            <h4>Business Hours</h4>
+                            <p>24/7 Service Available<br>Emergency Support Always</p>
+                        </div>
+                    </div>
+
+                    <div class="address-cta">
+                        <a href="tel:+919110864861" class="address-cta-btn" data-testid="call-now-btn">
+                            <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="mailto:sales@kpksecuresolutions.com" class="address-cta-btn secondary" data-testid="email-btn">
+                            <i class="fas fa-envelope"></i> Email Us
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="map-section" data-testid="map-section">
+    <!-- Contact Form Section -->
+    <section class="contact-section" data-testid="contact-section">
         <div class="container">
-            <h2 class="section-title" data-testid="map-title">Find Us</h2>
-            <div class="title-underline"></div>
-            <div class="map-container fade-in" data-testid="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3888.3520401661744!2d77.7025441750761!3d12.949310687364008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTLCsDU2JzU3LjUiTiA3N8KwNDInMTguNCJF!5e0!3m2!1sen!2sin!4v1773852416018!5m2!1sen!2sin"
-                        width="100%"
-                        height="450"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        data-testid="google-map-iframe">
-                </iframe>
+            <div class="contact-form-full">
+                <!-- Contact Form -->
+                <div class="contact-form-container fade-in" data-testid="contact-form-container">
+                    <h2 class="form-section-title">Send Us a Message</h2>
+                    <p class="form-description">Fill out the form below and we'll get back to you as soon as possible.</p>
+                    <div class="google-form-embed">
+                        <iframe
+                            src="https://docs.google.com/forms/d/e/1FAIpQLSfqEI16GlfWkHPL_ffUDeelm_kSVWA6MyoPeNzv2Hk2TQ-2JA/viewform?embedded=true"
+                            width="100%"
+                            height="900"
+                            frameborder="0"
+                            marginheight="0"
+                            marginwidth="0"
+                            style="border-radius: 12px; background: white;"
+                            data-testid="google-form-iframe">
+                            Loading…
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -214,3 +208,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+

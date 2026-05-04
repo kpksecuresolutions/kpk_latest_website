@@ -13,7 +13,7 @@
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
             <div class="logo-container">
-                <img src="https://customer-assets.emergentagent.com/job_36fd4dc6-1268-428d-9eb8-13905c0d6a94/artifacts/32m0hssd_KPK%20Source%20File.png" alt="KPK Secure Solutions Logo" class="logo">
+                <img src="https://customer-assets.emergentagent.com/job_36fd4dc6-1268-428d-9eb8-13905c0d6a94/artifacts/32m0hssd_KPK%20Source%20File.png" alt="KPK SECURE SOLUTIONS SERVICE Logo" class="logo">
             </div>
             <button class="mobile-menu-toggle" id="mobileMenuToggle" data-testid="mobile-menu-toggle">
                 <span></span>
@@ -45,7 +45,7 @@
                 <h2 class="section-title" data-testid="services-intro-title">What We Offer</h2>
                 <div class="title-underline"></div>
                 <p class="intro-text" data-testid="services-intro-text">
-                    At KPK Secure Solutions, we provide a comprehensive range of services designed to ensure the safety, cleanliness, and efficient operation of your premises. Our experienced team delivers customized solutions tailored to your specific requirements.
+                    At KPK SECURE SOLUTIONS SERVICE, we provide a comprehensive range of services designed to ensure the safety, cleanliness, and efficient operation of your premises. Our experienced team delivers customized solutions tailored to your specific requirements.
                 </p>
             </div>
         </div>
@@ -263,6 +263,117 @@
         </div>
     </section>
 
+    <!-- Services Photo Carousel -->
+    <section class="services-carousel-section" data-testid="services-carousel-section">
+        <div class="container">
+            <h2 class="section-title" data-testid="carousel-title">Our Services Gallery</h2>
+            <div class="title-underline"></div>
+
+            <div class="carousel-container" data-testid="carousel-container">
+                <div class="carousel-wrapper" id="carouselWrapper">
+                    <!-- Slide 1 - Security Services -->
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <div class="carousel-image-container" data-testid="carousel-slide-1">
+<!--                                <i class="fas fa-shield-alt"></i>-->
+                                <img src="images\security.JPG" alt="security">
+                                <span>Security Services</span>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>Security Services</h3>
+                                <p>Professional manned guarding and electronic surveillance</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 1 - Security Services 2 -->
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <div class="carousel-image-container" data-testid="carousel-slide-1">
+<!--                                <i class="fas fa-shield-alt"></i>-->
+                                <img src="images\security_services.jpg" alt="security">
+                                <span>Security Services</span>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>Security Services</h3>
+                                <p>Professional manned guarding and electronic surveillance</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 - Housekeeping Services -->
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <div class="carousel-image-container" data-testid="carousel-slide-2">
+<!--                                <i class="fas fa-broom"></i>-->
+                                <img src="images\Housekeeping.jpeg" alt="Name">
+                                <span>Housekeeping Services</span>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>Housekeeping Services</h3>
+                                <p>Eco-friendly cleaning and maintenance solutions</p>
+                            </div>
+                        </div>
+                    </div>
+
+<!--                Slide 4 - Company Board-->
+                    <div class="carousel-slide">
+                        <div class="carousel-card">
+                            <div class="carousel-image-container" data-testid="carousel-slide-1">
+<!--                                <i class="fas fa-shield-alt"></i>-->
+                                <img src="images\company_board.JPG" alt="security">
+                                <span>Our Office</span>
+                            </div>
+                            <div class="carousel-caption">
+                                <h3>Our Office</h3>
+                                <p>Located at a Prime Location</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 - Pest Control -->
+<!--                    <div class="carousel-slide">-->
+<!--                        <div class="carousel-card">-->
+<!--                            <div class="carousel-image-container" data-testid="carousel-slide-3">-->
+<!--                                <i class="fas fa-bug"></i>-->
+<!--                                <span>Pest Control</span>-->
+<!--                            </div>-->
+<!--                            <div class="carousel-caption">-->
+<!--                                <h3>Pest Control</h3>-->
+<!--                                <p>Safe and effective pest management solutions</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+
+                    <!-- Slide 4 - Reception Services -->
+<!--                    <div class="carousel-slide">-->
+<!--                        <div class="carousel-card">-->
+<!--                            <div class="carousel-image-container" data-testid="carousel-slide-4">-->
+<!--                                <i class="fas fa-user-tie"></i>-->
+<!--                                <span>Reception Services</span>-->
+<!--                            </div>-->
+<!--                            <div class="carousel-caption">-->
+<!--                                <h3>Reception Services</h3>-->
+<!--                                <p>Professional front-office management</p>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+
+                <!-- Carousel Navigation -->
+                <div class="carousel-nav">
+                    <button class="carousel-btn" onclick="moveCarousel(-1)" data-testid="carousel-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <span class="carousel-counter" id="carouselCounter">1 / 4</span>
+                    <button class="carousel-btn" onclick="moveCarousel(1)" data-testid="carousel-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section" data-testid="cta-section">
         <div class="container">
@@ -321,5 +432,30 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Carousel functionality
+        let currentSlide = 0;
+        const totalSlides = 4;
+        const wrapper = document.getElementById('carouselWrapper');
+        const counter = document.getElementById('carouselCounter');
+
+        function updateCarousel() {
+            wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+            counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+        }
+
+        function moveCarousel(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            updateCarousel();
+        }
+
+        // Auto-play carousel every 5 seconds
+        setInterval(() => {
+            moveCarousel(1);
+        }, 5000);
+    </script>
 </body>
 </html>
+

@@ -88,7 +88,7 @@ const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // Get form values
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
@@ -98,13 +98,13 @@ if (contactForm) {
 
         // TODO: Replace with your Google Form URL
         const googleFormURL = 'YOUR_GOOGLE_FORM_URL_HERE';
-        
+
         // For now, show alert (replace this with actual form submission)
         alert(`Thank you, ${name}! We have received your inquiry and will get back to you soon.\n\nNote: To make this form functional, replace 'YOUR_GOOGLE_FORM_URL_HERE' in script.js with your actual Google Form URL.`);
-        
+
         // Uncomment below to open Google Form in new tab
         // window.open(googleFormURL, '_blank');
-        
+
         // Reset form
         contactForm.reset();
     });
@@ -141,7 +141,7 @@ navLinks.forEach(link => {
 // ================================
 window.addEventListener('scroll', () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    
+
     // Add scroll-based animations or effects here if needed
 });
 
@@ -176,12 +176,12 @@ let currentTestimonial = 0;
 
 function rotateTestimonials() {
     testimonialCards.forEach((card, index) => {
-        card.style.transform = index === currentTestimonial 
-            ? 'scale(1.05)' 
+        card.style.transform = index === currentTestimonial
+            ? 'scale(1.05)'
             : 'scale(1)';
         card.style.opacity = index === currentTestimonial ? '1' : '0.7';
     });
-    
+
     currentTestimonial = (currentTestimonial + 1) % testimonialCards.length;
 }
 
@@ -190,4 +190,4 @@ if (testimonialCards.length > 0) {
 }
 */
 
-console.log('KPK SECURE SOLUTIONS SERVICE - Website Loaded Successfully');
+console.log('KPK Secure Solutions - Website Loaded Successfully');

@@ -998,6 +998,7 @@ section {
     gap: 60px;
 }
 
+
 .contact-form-container h2,
 .contact-info-container h2 {
     font-size: 2rem;
@@ -1411,5 +1412,613 @@ section {
 
     .team-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ================================
+   Hero Option 1 - Diagonal Split Design
+   ================================ */
+.hero-option-1 {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.diagonal-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--secondary-navy) 0%, var(--secondary-navy) 50%, var(--primary-red) 50%, var(--primary-red) 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+}
+
+.hero-option-1 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-content-1 {
+    color: white;
+}
+
+.badge-1 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    backdrop-filter: blur(10px);
+}
+
+.hero-title-1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title-1 .highlight {
+    color: #FFD700;
+    display: block;
+}
+
+.hero-subtitle-1 {
+    font-size: 1.3rem;
+    margin-bottom: 35px;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.hero-buttons-1 {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary-1 {
+    padding: 18px 40px;
+    background: var(--primary-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+     font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 30px rgba(230, 30, 42, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary-1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(230, 30, 42, 0.6);
+}
+
+.btn-secondary-1 {
+    padding: 18px 40px;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary-1:hover {
+    background: white;
+    color: var(--primary-red);
+}
+
+.hero-visual-1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo with glowing effect for visibility */
+.logo-container-hero {
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+.main-logo-1 {
+    width: 380px;
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8))
+            drop-shadow(0 0 60px rgba(255, 255, 255, 0.5))
+            drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+}
+
+/* Decorative ring around logo */
+.logo-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    height: 420px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: ring-pulse 2s ease-in-out infinite;
+}
+
+.logo-ring::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+}
+
+@keyframes ring-pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+    50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.9; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.floating-elements {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.circle-1 { width: 100px; height: 100px; top: 10%; left: -10%; animation-delay: 0s; }
+.circle-2 { width: 150px; height: 150px; bottom: 15%; right: -10%; animation-delay: 0.5s; }
+.circle-3 { width: 80px; height: 80px; top: 60%; left: -15%; animation-delay: 1s; }
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.3; }
+    50% { transform: scale(1.1); opacity: 0.5; }
+}
+
+/* Hero Option 1 Responsive */
+@media (max-width: 968px) {
+    .hero-option-1 .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-title-1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons-1 {
+        justify-content: center;
+    }
+
+    .main-logo-1 {
+        max-width: 280px;
+    }
+
+    .logo-ring {
+        width: 320px;
+        height: 320px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-buttons-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-primary-1,
+    .btn-secondary-1 {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ================================
+   Leadership Team Photo Placeholders
+   ================================ */
+.team-photo-placeholder {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--secondary-navy), #4a5568);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+}
+
+.team-photo-placeholder i {
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.team-photo-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* ================================
+   Services Photo Carousel
+   ================================ */
+.services-carousel-section {
+    background: var(--bg-light);
+    padding: 80px 0;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.carousel-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+}
+
+.carousel-image-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, var(--secondary-navy), #4a5568);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel-image-container i {
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 15px;
+}
+
+.carousel-image-container span {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.carousel-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.carousel-caption {
+    padding: 25px;
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* Carousel Navigation */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.carousel-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary-red);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(230, 30, 42, 0.3);
+}
+
+.carousel-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(230, 30, 42, 0.5);
+}
+
+.carousel-counter {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+/* Carousel Responsive */
+@media (max-width: 768px) {
+    .carousel-image-container {
+        height: 300px;
+    }
+
+    .carousel-image-container i {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-image-container {
+        height: 250px;
+    }
+
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* ================================
+   Contact Page - Map and Address
+   ================================ */
+.contact-map-address-section {
+    background: var(--bg-white);
+    padding: 80px 0;
+}
+
+.map-address-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.map-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    min-height: 450px;
+}
+
+.map-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 450px;
+    border: none;
+}
+
+.address-wrapper {
+    background: linear-gradient(135deg, var(--secondary-navy), #4a5568);
+    border-radius: 16px;
+    padding: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.address-wrapper h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.address-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.address-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.address-content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.address-content p {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.address-content a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.address-content a:hover {
+    color: var(--primary-red);
+}
+
+.address-cta {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.address-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 25px;
+    background: var(--primary-red);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.address-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(230, 30, 42, 0.4);
+}
+
+.address-cta-btn.secondary {
+    background: transparent;
+    border: 2px solid white;
+}
+
+.address-cta-btn.secondary:hover {
+    background: white;
+    color: var(--secondary-navy);
+}
+
+/* Map Address Responsive */
+@media (max-width: 968px) {
+    .map-address-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-wrapper {
+        min-height: 350px;
+    }
+
+    .map-wrapper iframe {
+        min-height: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .address-wrapper {
+        padding: 30px 20px;
+    }
+
+    .address-cta {
+        flex-direction: column;
+    }
+
+    .address-cta-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ================================
+   Contact Form - Full Width Layout
+   ================================ */
+.contact-form-full {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-form-full .contact-form-container {
+    background: var(--bg-light);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+.form-section-title {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--text-dark);
+}
+
+.contact-form-full .form-description {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+}
+
+.google-form-embed {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    .contact-form-full .contact-form-container {
+        padding: 30px 20px;
+    }
+
+    .form-section-title {
+        font-size: 1.8rem;
+    }
+
+    .google-form-embed iframe {
+        height: 800px !important;
     }
 }
